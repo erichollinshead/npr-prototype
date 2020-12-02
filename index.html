@@ -14,13 +14,41 @@
 
 
     <style>
-      
+
+    .gradient {
+      height: 10px;
+      background: rgb(214,32,33);
+      background: linear-gradient(90deg, rgba(214,32,33,1) 0%, rgba(35,123,189,1) 100%);
+    }
+
+    .alert {
+      position: fixed;
+      top: 160px;
+      left: -28px;
+      z-index: 1000;
+    }
+
+    .sidebar-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .make-me-sticky {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      padding: 90px 0;
+    }
       
     </style>
 
   </head>
   <body>
     
+  <img src="toast.png" width="342px" class="alert" />
 
   <div class="header py-3">
     <div class="container">
@@ -33,6 +61,7 @@
     </div>
     <!--container-->
 </div>
+<div class="gradient"></div>
 <nav class="navbar navbar-expand-sm sticky-top navbar-light bg-light py-3">
     <div class="container">
         <div class="row justifiy-content-center">
@@ -47,14 +76,18 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-8 py-5">
+        <div class="col-8 py-5" style="margin-top: 10px;">
             
             <img src="content.jpg" width="705px" />
 
         </div>
         <div class="col-4 py-5">
-            
-            <img src="timeline.jpg" width="321px" />
+
+             <div class="sidebar-item">
+                <div class="make-me-sticky">
+                  <img src="timeline.jpg" width="321px" />
+                </div>
+              </div>
 
         </div>
     </div>
